@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    color: rgb(74, 74, 74);
 }
 
 html {
@@ -12,7 +13,7 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
 h2 {
@@ -28,7 +29,7 @@ h4 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 /* HEADER */
 
@@ -78,7 +79,17 @@ header {
     color: darkslategray;
 }
 
+.mobile {
+    display: none;
+}
+
+
+
 /* MAIN PART */
+
+.block-mobile {
+    display: none;
+}
 
 .block {
     padding: 0 1.5rem;
@@ -114,8 +125,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 30%;
+    max-width: 40%;
 }
+
+.text-container h1, .text-container h3, .text-container h2 {
+    max-width: 90%;
+}
+
+
     
 .quote {
     font-size: 1rem;
@@ -123,7 +140,7 @@ header {
 
 .emanuel {
     padding: 2rem 0;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 .text-container h4 {
     text-align: left;
@@ -136,12 +153,13 @@ header {
 }
 
 .text-container .button {
-    background-color: gray;
+    background-color: #484848;
     padding: 1rem 0;
-    width: 92%;
+    width: 80%;
     text-align: center;
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
 .info-container {
@@ -171,12 +189,13 @@ header {
 }
 
 .info-text p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0.5rem 0;
 }
 
 .info-text a {
-    font-size: 1rem; 
+    color: #53caff;
+    font-size: 1.5rem; 
     text-decoration: none;
     padding: 0.5rem 0;
 }
@@ -246,7 +265,7 @@ header {
     width: 100%;
 }
 
-.video-container h4 {
+.video-container h3 {
     padding: 1.5rem 0;
 }
 
@@ -268,6 +287,10 @@ footer {
     align-items: baseline;
 }
 
+footer .copyright {
+    font-size: 1rem;
+}
+
 footer .tp {
     margin-left: auto;
 }
@@ -283,4 +306,135 @@ footer .tp ul li {
 
 footer .tp ul li a {
     text-decoration: none;
+}
+
+/* Mobile Section */
+
+@media only screen and (max-width: 720px) {
+    .desktop {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+   .name, .nav {
+       display: none;
+   }
+
+   .mobile {
+       display: block;
+   }
+
+
+   .logo img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+    .block-mobile {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .block-mobile .image-container {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .block-mobile .text-container {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+    }
+
+    .block-mobile .text-container h1, .block-mobile .text-container h2 {
+        padding-bottom: 2rem;
+    }
+
+    .block-mobile .text-container .button {
+        width: 100%;
+    }
+
+    .mobile-images-container {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        padding: 1rem;
+    }
+
+    .monile-images-container .mobile-image-holder {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-images-container .mobile-image-holder img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-info-text {
+        padding: 1rem 1rem;
+        border: none;
+    }
+
+    .mobile-info-text h3 , .mobile-info-text p {
+        padding: 0.5rem 0;
+    }
+
+    .mobile-info-text a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #53caff;
+        padding: 0;
+    }
+
+    .third-block {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .third-block h2 {
+        padding: 1rem;
+        
+    }
+
+    .mobile-courses {
+        padding-bottom: 1rem;
+    }
+
+    .mobile-course-box {
+        background-color: lightgray;
+        padding: 1rem;
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+
+    .fourth-block {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .fourth-block h2 {
+        padding: 1rem 0;
+    }
+
+    .fourth-block video {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
 }
